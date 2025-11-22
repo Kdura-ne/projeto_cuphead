@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3e5ab;
+    background-image: url(../media/cupheadbk.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #3d3d3d;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    min-height: 110.2vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background-image: url(../media/old-paper-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 4px solid #000;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px #000;
+    padding: 20px 30px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 4px dashed #000;
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 4rem;
+    color: #e74c3c;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 0 #000;
+    -webkit-text-stroke: 1px #000;
+}
+
+h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 2.5rem;
+    color: #3498db;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 #000;
+    -webkit-text-stroke: 0.5px #000;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+#cadastro, #cadastro form{
+    box-sizing: border-box;
+}
+
+#cadastro form {
+    max-height: none;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+#cadastro form > div {
+    margin-bottom: 15px;
+}
+
+#cadastro label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#cadastro input[type="text"],
+#cadastro textarea,
+#cadastro select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+#cadastro select {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    appearance: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#cadastro input[type="text"]:focus,
+#cadastro textarea:focus,
+#cadastro select:focus {
+    outline: none;
+    box-shadow: 4px 4px 0px #000;
+}
+
+#cadastro textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#cadastro button {
+    font-family: 'Bangers', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #fff;
+    background-color: #f1c40f; /* Amarelo */
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    text-shadow: 2px 2px 0 #000;
+    box-shadow: 4px 4px 0px #000;
+    transition: all 0.2s ease-in-out;
+    margin-top: 30px;
+}
+
+#cadastro button:hover {
+    background-color: #f39c12;
+    transform: scale(1.02);
+}
+
+#cadastro button:active {
+    box-shadow: 1px 1px 0px #000;
+    transform: translate(3px, 3px);
+}
+
+#consulta {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #000;
+    text-align: center;
+}
+
+th, td {
+    padding: 12px;
+    border: 2px solid #000;
+}
+
+thead th {
+    font-family: 'Bangers', cursive;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-shadow: 1px 1px 0 #000;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #FEC552;
+    color: #1e1e1e;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #F9EEAE;
+    color: #1e1e1e;
+}
+
+tbody tr:nth-child(odd):hover {
+    background-color: #faaf19;
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:nth-child(even):hover {
+    background-color: #f8df52;
+    transition: background-color 0.3s ease;
+}
+
+td {
+    vertical-align: middle;
+}
+
+.tables-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.custom-select-wrapper{
+    position: relative;
+    user-select: none;
+    width: 100%;
+}
+
+.custom-select {
+    position: relative;
+}
+
+.custom-select__trigger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in-out;
+    margin-bottom: 6px;
+}
+
+.custom-select.open .custom-select__trigger {
+    box-shadow: 4px 4px 0px #000;
+}
+
+.arrow {
+    position: relative;
+    height: 10px;
+    width: 10px;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease;
+}
+
+.custom-select.open .arrow {
+    transform: rotate(135deg);
+}
+
+.custom-options {
+    position: absolute;
+    text-align: center;
+    top: calc(100% + 5px);
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 5px;
+    z-index: 10;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    overflow-y: auto;
+    max-height: 250px;
+}
+
+.custom-select.open .custom-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.custom-option {
+    display: block;
+    padding: 18px 15px; 
+    font-size: 1.09rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    color: #3498db;
+    transform: translateY(-10px);
+}
+
+.custom-select.open .custom-option {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Animação em Cascata --- */
+.custom-select.open .custom-option:nth-child(1) { transition-delay: 0.05s; }
+.custom-select.open .custom-option:nth-child(2) { transition-delay: 0.1s; }
+.custom-select.open .custom-option:nth-child(3) { transition-delay: 0.15s; }
+/* Adicione mais linhas se tiver mais opções */
+
+.custom-option:not(:last-of-type) {
+    border-bottom: 1px solid #ddd;
+}
+
+.custom-option:hover {
+    background-color: #fde3a7;
+}
+
+.custom-option.selected {
+    color: #e74c3c;
+    font-weight: bold;
+    background-color: #fdf5e6;
+}
